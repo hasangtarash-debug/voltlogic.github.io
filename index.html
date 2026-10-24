@@ -1,0 +1,764 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Voltlogic | پیمانکار برق صنعتی در تهران، کرج و قزوین</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23070707'/%3E%3Cpath d='M16 12H30A20 20 0 0 1 30 52H16Z' fill='%23111' stroke='%23ffd400' stroke-width='4'/%3E%3Cpolygon points='36,17 25,34 31,34 28,47 40,29 33,29' fill='%23ffd400'/%3E%3C/svg%3E">
+<meta name="description" content="Voltlogic؛ مجموعه مهندسی برق و اتوماسیون صنعتی با دفتر مهندسی. طراحی و اجرای تاسیسات الکتریکی، ساخت تابلو، برنامه‌نویسی پی‌ال‌سی و سیستم‌های امنیتی و نظارتی. بیش از ۳۰ پروژه فعال صنعتی در تهران، کرج و قزوین.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{--y:#ffd400;--y2:#ff9d00;--bk:#070707;--bk2:#101010;--bk3:#181818;--line:rgba(255,212,0,.28);--text:#f2f2f2;--muted:#a8a8a8;--stripe:30px}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Vazirmatn',Tahoma,sans-serif;background:var(--bk);color:var(--text);line-height:1.9;overflow-x:hidden;padding-left:var(--stripe)}
+body::before{content:"";position:fixed;inset:0;z-index:0;pointer-events:none;background:
+ radial-gradient(900px 500px at 80% -5%,rgba(255,212,0,.09),transparent 60%),
+ linear-gradient(rgba(255,212,0,.035) 1px,transparent 1px) 0 0/48px 48px,
+ linear-gradient(90deg,rgba(255,212,0,.035) 1px,transparent 1px) 0 0/48px 48px}
+a{color:inherit;text-decoration:none}
+.wrap{width:min(1180px,92%);margin-inline:auto;position:relative;z-index:1}
+section{padding:90px 0;position:relative;z-index:1}
+
+/* نوار خطر عمودی */
+.hazard{position:fixed;left:0;top:0;bottom:0;width:var(--stripe);z-index:80;background:repeating-linear-gradient(-45deg,var(--y) 0 18px,#0b0b0b 18px 36px);background-size:51px 51px;animation:haz 2.4s linear infinite;box-shadow:4px 0 22px rgba(255,212,0,.35);border-right:2px solid #000}
+@keyframes haz{to{background-position:0 51px}}
+
+/* منو */
+nav{position:fixed;top:12px;left:calc(var(--stripe) + 10px);right:10px;z-index:70;display:flex;justify-content:center}
+.bar{width:min(1180px,100%);display:flex;align-items:center;justify-content:space-between;gap:10px;padding:9px 18px;border-radius:14px;background:rgba(10,10,10,.82);backdrop-filter:blur(14px);border:1px solid var(--line);box-shadow:0 0 28px rgba(255,212,0,.12)}
+.brand{font-weight:800;display:flex;align-items:center;gap:8px;white-space:nowrap}
+.brand i{font-style:normal;color:#000;background:var(--y);width:30px;height:30px;border-radius:8px;display:grid;place-items:center;animation:blink 3s infinite}
+.menu{display:flex;gap:2px;list-style:none}
+.menu a{padding:7px 13px;border-radius:10px;color:var(--muted);font-size:.93rem;transition:.25s;white-space:nowrap}
+.menu a:hover,.menu a.act{color:#000;background:var(--y)}
+.quick{display:flex;align-items:center;gap:8px;padding:7px 14px;border-radius:10px;background:var(--y);color:#000;font-weight:800;white-space:nowrap;font-size:.92rem}
+.burger{display:none;background:none;border:0;color:var(--y);font-size:1.7rem;cursor:pointer}
+@keyframes blink{0%,100%{opacity:1}45%{opacity:.6}50%{opacity:1}}
+
+/* دکمه */
+.btn{display:inline-block;padding:13px 26px;border-radius:12px;font-weight:700;border:2px solid var(--y);background:transparent;color:var(--y);transition:.25s;cursor:pointer;font-family:inherit;font-size:1rem}
+.btn:hover{transform:translateY(-3px);box-shadow:0 8px 28px rgba(255,212,0,.35)}
+.btn.pri{background:var(--y);color:#000}
+
+/* بخش اول */
+.hero{padding:112px 0 50px;position:relative;z-index:1}
+.hero .top{text-align:center;max-width:860px;margin:0 auto 26px}
+.tag{display:inline-block;padding:4px 14px;border:1px solid var(--line);border-radius:30px;color:var(--y);font-size:.85rem;margin-bottom:14px;background:rgba(255,212,0,.06)}
+.hero h1{font-size:clamp(1.9rem,4.6vw,3.4rem);font-weight:800;line-height:1.4;margin-bottom:10px}
+.hero h1 em{font-style:normal;color:var(--y);text-shadow:0 0 22px rgba(255,212,0,.45)}
+.hero p.sub{color:var(--muted);font-size:1.05rem;margin-bottom:20px}
+.cta{display:flex;gap:12px;flex-wrap:wrap;justify-content:center}
+.scene{position:relative;border-radius:22px;border:2px solid var(--line);background:linear-gradient(180deg,#0d0d0d,#060606);box-shadow:0 0 60px rgba(255,212,0,.12),inset 0 0 60px rgba(255,212,0,.04);padding:14px;margin-top:22px}
+.scene .sc{overflow-x:auto}
+.scene svg{display:block;width:100%;min-width:760px;height:auto;direction:ltr}
+.scene svg text{font-family:'Vazirmatn',Tahoma,sans-serif}
+.hint{color:var(--muted);font-size:.82rem;text-align:center;margin-top:8px}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:22px}
+.stat{padding:18px 12px;text-align:center;border-radius:16px;background:var(--bk2);border:1px solid var(--line);position:relative;overflow:hidden}
+.stat::after{content:"";position:absolute;inset-inline:0;bottom:0;height:5px;background:repeating-linear-gradient(-45deg,var(--y) 0 8px,#000 8px 16px)}
+.stat strong{display:block;font-size:2.1rem;font-weight:800;color:var(--y);text-shadow:0 0 16px rgba(255,212,0,.4)}
+.stat small{color:var(--muted)}
+
+/* عنوان بخش */
+h2.title{font-size:clamp(1.5rem,3.2vw,2.3rem);font-weight:800;margin-bottom:8px}
+h2.title span{color:var(--y)}
+.hbar{height:9px;width:120px;background:repeating-linear-gradient(-45deg,var(--y) 0 8px,#000 8px 16px);margin-bottom:16px;border-radius:3px}
+p.lead{color:var(--muted);max-width:720px;margin-bottom:38px}
+
+/* کارت */
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px}
+.card{padding:24px;border-radius:16px;background:var(--bk2);border:1px solid #2a2a2a;border-top:3px solid var(--y);transition:.3s;opacity:0;transform:translateY(34px);position:relative}
+.card.in{opacity:1;transform:none}
+.card:hover{transform:translateY(-7px);border-color:var(--y);box-shadow:0 14px 36px rgba(255,212,0,.2)}
+.ico{width:50px;height:50px;border-radius:12px;display:grid;place-items:center;font-size:1.5rem;margin-bottom:12px;background:var(--y);color:#000;box-shadow:0 0 20px rgba(255,212,0,.35)}
+.card h3{font-size:1.05rem;margin-bottom:5px}
+.card p{color:var(--muted);font-size:.92rem}
+
+/* سامانه‌ها */
+.sys{display:grid;grid-template-columns:300px 1fr;gap:22px}
+.tabs{display:grid;gap:9px;align-content:start}
+.tab{text-align:start;padding:13px 16px;border-radius:12px;border:1px solid #2a2a2a;background:var(--bk2);color:var(--muted);cursor:pointer;font-family:inherit;font-size:1rem;transition:.25s}
+.tab:hover{color:#fff;border-color:var(--y)}
+.tab.on{background:var(--y);color:#000;font-weight:700;border-color:var(--y)}
+.view{padding:28px;border-radius:18px;border:1px solid var(--line);background:var(--bk2);min-height:330px;animation:fade .45s}
+@keyframes fade{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+.view h3{font-size:1.35rem;color:var(--y);margin-bottom:4px}
+.view .sum{color:var(--muted);margin-bottom:18px}
+.cols{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.col{padding:15px;border-radius:12px;background:#0a0a0a;border:1px solid #2a2a2a;border-top:3px solid var(--y)}
+.col h4{color:var(--y);margin-bottom:5px;font-size:.97rem}
+.col p,.col ol{font-size:.9rem;padding-inline-start:0}
+.col ol{padding-inline-start:18px}
+
+/* دفتر و درباره */
+.about{display:grid;grid-template-columns:1.2fr .8fr;gap:28px;align-items:start}
+.about p{color:var(--muted);margin-bottom:13px}
+.about p b{color:var(--y)}
+.office{padding:24px;border-radius:18px;background:var(--bk2);border:1px solid var(--line)}
+.office h3{color:var(--y);margin-bottom:10px}
+.office li{list-style:none;padding:8px 0;border-bottom:1px dashed #2f2f2f;color:var(--text);font-size:.94rem}
+.office li::before{content:"▶";color:var(--y);margin-inline-end:9px;font-size:.7rem}
+
+/* نمونه‌کار */
+.gal{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:14px}
+.shot{aspect-ratio:4/3;border-radius:14px;border:2px dashed #3a3a3a;display:grid;place-items:center;color:var(--muted);background:repeating-linear-gradient(-45deg,rgba(255,212,0,.04) 0 12px,transparent 12px 24px);cursor:pointer;transition:.3s;text-align:center;padding:10px}
+.shot:hover{transform:scale(1.04);border-color:var(--y);color:var(--y)}
+.lb{position:fixed;inset:0;z-index:99;background:rgba(0,0,0,.9);display:none;place-items:center}
+.lb.on{display:grid}
+.lb div{width:min(760px,88%);aspect-ratio:16/10;border-radius:16px;border:2px solid var(--y);display:grid;place-items:center;color:var(--muted);background:#0b0b0b;animation:fade .35s;text-align:center;padding:20px}
+
+/* تماس */
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:26px}
+form{display:grid;gap:13px;padding:26px;border-radius:18px;background:var(--bk2);border:1px solid var(--line)}
+input,select,textarea{width:100%;padding:12px 15px;border-radius:10px;border:1px solid #333;background:#0a0a0a;color:#fff;font-family:inherit;font-size:1rem}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--y);box-shadow:0 0 14px rgba(255,212,0,.3)}
+.info{display:grid;gap:14px;align-content:start}
+.info .card{opacity:1;transform:none}
+.info a{color:var(--y);font-weight:700;direction:ltr;display:inline-block}
+footer{padding:26px 0;text-align:center;color:var(--muted);border-top:1px solid var(--line);font-size:.9rem;position:relative;z-index:1}
+footer a{color:var(--y)}
+
+/* دسترسی سریع (سمت راست) */
+.dock{position:fixed;right:12px;top:50%;transform:translateY(-50%);z-index:75;display:grid;gap:10px}
+.dock a{width:50px;height:50px;border-radius:14px;display:grid;place-items:center;font-size:1.35rem;background:var(--bk2);border:2px solid var(--y);color:var(--y);transition:.25s;position:relative}
+.dock a:hover{background:var(--y);color:#000;transform:translateX(-6px)}
+.dock a span{position:absolute;right:58px;background:var(--y);color:#000;font-size:.78rem;font-weight:700;padding:2px 9px;border-radius:7px;white-space:nowrap;opacity:0;pointer-events:none;transition:.2s}
+.dock a:hover span{opacity:1}
+.dock a.call{background:var(--y);color:#000;animation:pulse 2s infinite}
+@keyframes pulse{70%{box-shadow:0 0 0 18px rgba(255,212,0,0)}100%{box-shadow:0 0 0 0 rgba(255,212,0,0)}}
+
+/* عناصر صحنه */
+.led{fill:#262626;stroke:#000;stroke-width:1}
+.led.g.on{fill:#2dff9a;filter:drop-shadow(0 0 4px #2dff9a)}
+.led.y.on{fill:#ffd400;filter:drop-shadow(0 0 4px #ffd400)}
+.led.r.on{fill:#ff3b30;filter:drop-shadow(0 0 5px #ff3b30)}
+.pipe{fill:none;stroke:#2c2c2c;stroke-width:9;stroke-linejoin:round}
+.flow{fill:none;stroke:var(--y);stroke-width:3;stroke-dasharray:5 11;opacity:0;animation:dash .6s linear infinite}
+.flow.act{opacity:1}
+.wire{fill:none;stroke:#4a4a4a;stroke-width:2;stroke-dasharray:6 8}
+.wire.act{animation:dash .8s linear infinite}
+.wire.in.act{stroke:#eaeaea}
+.wire.out.act{stroke:var(--y)}
+@keyframes dash{to{stroke-dashoffset:-28}}
+.spin{transform-box:fill-box;transform-origin:center;animation:spin .9s linear infinite;animation-play-state:paused}
+.spin.on{animation-play-state:running}
+@keyframes spin{to{transform:rotate(360deg)}}
+.lbl{font-size:11px;fill:#cfcfcf}
+.btnsvg{cursor:pointer}
+.btnsvg:hover rect{filter:brightness(1.3)}
+
+@media(max-width:960px){
+  :root{--stripe:16px}
+  .sys,.about,.contact{grid-template-columns:1fr}
+  .cols{grid-template-columns:1fr}
+  .tabs{grid-template-columns:1fr 1fr}
+  .stats{grid-template-columns:1fr 1fr}
+  .burger{display:block}
+  .quick span{display:none}
+  .menu{display:none;position:absolute;top:62px;left:0;right:0;flex-direction:column;padding:10px;border-radius:14px;background:rgba(10,10,10,.97);border:1px solid var(--line)}
+  .menu.open{display:flex}
+  .dock{top:auto;bottom:14px;transform:none;grid-auto-flow:column;right:50%;margin-right:-80px}
+  .dock a span{display:none}
+}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.card{opacity:1;transform:none}}
+
+.page{display:none;padding:122px 0 80px;position:relative;z-index:1}
+.page.active{display:block;animation:fade .45s}
+.hero.hide{display:none}
+.hero{padding:104px 0 40px}
+.lw{position:relative;width:140px;height:140px;display:grid;place-items:center;margin:0 auto 4px}
+.lw::before{content:"";position:absolute;inset:0;border-radius:50%;border:2px dashed rgba(255,212,0,.55);animation:spin 16s linear infinite}
+.lw::after{content:"";position:absolute;inset:10px;border-radius:50%;box-shadow:inset 0 0 50px rgba(255,212,0,.22)}
+.logo{width:42px;height:42px;display:block;filter:drop-shadow(0 0 8px rgba(255,212,0,.5))}
+.logo.big{width:100px;height:100px;animation:glow 3s ease-in-out infinite}
+@keyframes glow{50%{filter:drop-shadow(0 0 20px rgba(255,212,0,.95))}}
+.wm{font-weight:800}.wm b{color:var(--y)}
+.brand .logo{width:34px;height:34px}.brand .wm{font-size:1.3rem}
+h1.brandh{font-size:clamp(2.8rem,8vw,5rem);font-weight:800;line-height:1.25;margin-bottom:0}
+h1.brandh b{color:var(--y);text-shadow:0 0 30px rgba(255,212,0,.55)}
+.slogan{font-size:clamp(1.1rem,2.6vw,1.6rem);font-weight:600;margin:4px 0 8px}
+.slogan em{font-style:normal;color:var(--y)}
+.tiles{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:20px}
+.tile{padding:16px 18px;border-radius:14px;border:1px solid var(--line);background:var(--bk2);display:flex;align-items:center;gap:12px;transition:.25s;font-weight:700}
+.tile:hover{border-color:var(--y);transform:translateY(-4px);box-shadow:0 10px 28px rgba(255,212,0,.2)}
+.tile i{font-style:normal;flex:none;width:44px;height:44px;border-radius:12px;background:var(--y);color:#000;display:grid;place-items:center;font-size:1.3rem}
+.tile small{display:block;font-weight:400;color:var(--muted)}
+.shot.has{padding:0;border-style:solid;overflow:hidden}
+.shot img{width:100%;height:100%;object-fit:cover;display:block}
+.btn.wa{background:#25d366;border-color:#25d366;color:#04210f}
+.areas{display:flex;gap:8px;flex-wrap:wrap;margin-top:6px}
+.areas span{padding:2px 13px;border-radius:20px;border:1px solid var(--line);color:var(--y);font-size:.9rem}
+.flogo{display:inline-flex;align-items:center;gap:8px;margin-bottom:6px}
+.flogo .logo{width:30px;height:30px}
+@media(max-width:960px){.tiles{grid-template-columns:1fr}.dock{right:50%;margin-right:-115px}.page{padding-top:100px}}
+form{align-content:start}.contact{align-items:start}.wm,h1.brandh{direction:ltr;unicode-bidi:isolate;letter-spacing:.3px}
+.hero p.desc{max-width:700px;margin:0 auto 20px;color:#dcdcdc;font-size:1.05rem}
+.what{margin-top:54px}
+.what .areas{margin-top:20px}
+.shot{position:relative}
+.shot .cap{position:absolute;inset-inline:0;bottom:0;padding:26px 12px 10px;background:linear-gradient(transparent,rgba(0,0,0,.88));color:#fff;font-size:.85rem;line-height:1.6;text-align:start}
+.gal{grid-template-columns:repeat(auto-fill,minmax(250px,1fr))}
+#lbBox.img{width:min(980px,92vw);height:86vh;aspect-ratio:auto;padding:0;display:grid;grid-template-rows:1fr auto;overflow:hidden;color:#fff}
+#lbBox img{min-height:0;min-width:0;width:100%;height:100%;object-fit:contain;background:#050505}
+.lcap{padding:10px 16px;background:#000;color:var(--y);font-weight:700;text-align:center}
+.lbn,.lbx{position:absolute;z-index:3;width:48px;height:48px;border-radius:50%;border:2px solid var(--y);background:rgba(0,0,0,.65);color:var(--y);font-size:1.7rem;line-height:1;cursor:pointer}
+.lbn{top:50%;transform:translateY(-50%)}
+.lbn.prev{right:14px}.lbn.next{left:14px}
+.lbx{top:14px;left:14px;font-size:1.2rem}
+@media(max-width:960px){#lbBox.img{height:70vh}.lbn.prev{right:6px}.lbn.next{left:6px}.lbn{top:auto;bottom:16px;transform:none}}
+.lcap{display:block}@media(min-width:961px){body{padding-right:66px}nav{right:76px}}.what .grid{grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}</style>
+</head>
+<body>
+<div class="hazard"></div>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+ <defs>
+  <linearGradient id="lgBolt" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff176"/><stop offset=".5" stop-color="#ffd400"/><stop offset="1" stop-color="#ff9d00"/></linearGradient>
+  <linearGradient id="lgHex" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#202020"/><stop offset="1" stop-color="#050505"/></linearGradient>
+ </defs>
+ <symbol id="logo" viewBox="0 0 64 64">
+  <path d="M4 24H16M4 40H16M50 32H60" stroke="#ffd400" stroke-width="2.4" stroke-linecap="round" fill="none"/>
+  <circle cx="5" cy="24" r="2.6" fill="#ffd400"/><circle cx="5" cy="40" r="2.6" fill="#ffd400"/><circle cx="59" cy="32" r="2.6" fill="#ffd400"/>
+  <path d="M16 12H30A20 20 0 0 1 30 52H16Z" fill="url(#lgHex)" stroke="#ffd400" stroke-width="3" stroke-linejoin="round"/>
+  <polygon points="36,17 25,34 31,34 28,47 40,29 33,29" fill="url(#lgBolt)" stroke="#000" stroke-width=".8" stroke-linejoin="round"/>
+ </symbol>
+</svg>
+<nav><div class="bar">
+  <a class="brand" href="#home" aria-label="Voltlogic"><svg class="logo"><use href="#logo"/></svg><span class="wm">Volt<b>logic</b></span></a>
+  <button class="burger" id="burger" aria-label="منو">☰</button>
+  <ul class="menu" id="menu">
+    <li><a href="#home">صفحه اصلی</a></li>
+    <li><a href="#services">خدمات</a></li>
+    <li><a href="#systems">سامانه‌ها</a></li>
+    <li><a href="#projects">پروژه‌ها</a></li>
+    <li><a href="#about">درباره ما</a></li>
+    <li><a href="#contact">تماس</a></li>
+  </ul>
+  <a class="quick" href="tel:09100051006">📞 <span>۰۹۱۰۰۰۵۱۰۰۶</span></a>
+</div></nav>
+
+<div class="dock">
+  <a class="call" href="tel:09100051006" aria-label="تماس"><span>تماس تلفنی</span>📞</a>
+  <a href="https://wa.me/message/5FI6PXXZJB2BB1" target="_blank" rel="noopener" aria-label="واتس‌اپ"><span>واتس‌اپ</span>💬</a>
+  <a href="mailto:hasangtarash@gmail.com" aria-label="ایمیل"><span>ارسال ایمیل</span>✉</a>
+  <a href="#contact" aria-label="درخواست"><span>درخواست برآورد</span>📋</a>
+</div>
+
+<header class="hero" id="home"><div class="wrap">
+  <div class="top">
+    <div class="lw"><svg class="logo big"><use href="#logo"/></svg></div>
+    <h1 class="brandh">Volt<b>logic</b></h1>
+    <p class="slogan">پیمانکار برق صنعتی، <em>از طراحی تا بهره‌برداری</em></p>
+    <p class="sub">دارای دفتر مهندسی برق • بیش از ۱۰ سال سابقه • بیش از ۳۰ پروژه فعال صنعتی • تهران، کرج و قزوین</p>
+    <p class="desc">مجموعه مهندسی برق و اتوماسیون صنعتی: طراحی و اجرای تاسیسات الکتریکی، ساخت تابلو، برنامه‌نویسی پی‌ال‌سی و طراحی سیستم‌های امنیتی و نظارتی برای کارخانه‌ها و پلنت‌های صنعتی.</p>
+    <div class="cta">
+      <a class="btn pri" href="#contact">درخواست بازدید و برآورد رایگان</a>
+      <a class="btn wa" href="https://wa.me/message/5FI6PXXZJB2BB1" target="_blank" rel="noopener">گفتگو در واتس‌اپ</a>
+    </div>
+  </div>
+
+  <div class="scene"><div class="sc">
+<svg viewBox="0 0 1000 540" role="img" aria-label="تابلوی کنترل‌کننده برنامه‌پذیر با حسگرها، عملگرها و صفحه عملگر متحرک">
+<defs>
+  <clipPath id="tankClip"><rect x="64" y="114" width="122" height="182" rx="6"/></clipPath>
+  <linearGradient id="liqG" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffd400" stop-opacity=".9"/><stop offset="1" stop-color="#ff9d00" stop-opacity=".55"/></linearGradient>
+  <pattern id="grd" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#161616" stroke-width="1"/></pattern>
+</defs>
+<rect width="1000" height="540" fill="url(#grd)"/>
+
+<!-- راهنما -->
+<line x1="20" y1="24" x2="48" y2="24" stroke="#eaeaea" stroke-width="2" stroke-dasharray="6 6"/><text class="lbl" x="56" y="28">سیگنال حسگرها (ورودی)</text>
+<line x1="190" y1="24" x2="218" y2="24" stroke="#ffd400" stroke-width="2" stroke-dasharray="6 6"/><text class="lbl" x="226" y="28">فرمان عملگرها (خروجی)</text>
+
+<!-- لوله‌ها -->
+<path class="pipe" d="M20 95H58M82 95H125V110"/>
+<path id="flowIn" class="flow" d="M20 95H58M82 95H125V110"/>
+<path class="pipe" d="M125 300V323M147 345H250V418"/>
+<path id="flowOut" class="flow" d="M125 300V323M147 345H250V418"/>
+<polygon points="243,418 257,418 253,428 247,428" fill="#555"/>
+
+<!-- سیم‌ها -->
+<path id="w1" class="wire in" d="M216 150H405V165H420"/>
+<path id="w2" class="wire in" d="M216 125H395V180H420"/>
+<path id="w3" class="wire in" d="M300 385V372H385V195H420"/>
+<path id="w4" class="wire in" d="M130 502V520H375V210H420"/>
+<path id="w5" class="wire out" d="M420 300H330V60H70V68"/>
+<path id="w6" class="wire out" d="M420 315H345V358H143"/>
+<path id="w7" class="wire out" d="M420 330H410V452"/>
+<path id="wH" class="wire out act" d="M700 190H725"/>
+
+<!-- مخزن -->
+<rect x="60" y="110" width="130" height="190" rx="10" fill="#0c0c0c" stroke="#ffd400" stroke-width="3"/>
+<rect id="liq" clip-path="url(#tankClip)" x="64" y="200" width="122" height="96" fill="url(#liqG)"/>
+<g stroke="#ffd400" stroke-opacity=".5"><line x1="168" y1="140" x2="186" y2="140"/><line x1="176" y1="190" x2="186" y2="190"/><line x1="168" y1="240" x2="186" y2="240"/></g>
+<text class="lbl" x="125" y="131" text-anchor="middle" fill="#fff">مخزن فرایند</text>
+
+<!-- شیر برقی -->
+<polygon id="valveBody" points="58,85 82,105 82,85 58,105" fill="#333" stroke="#ffd400" stroke-width="2"/>
+<line x1="70" y1="80" x2="70" y2="95" stroke="#ffd400" stroke-width="2"/>
+<rect x="62" y="68" width="16" height="12" rx="2" fill="#222" stroke="#ffd400"/>
+<text class="lbl" x="34" y="80" text-anchor="middle">شیر برقی</text>
+
+<!-- حسگرهای مخزن -->
+<line x1="190" y1="150" x2="196" y2="150" stroke="#ffd400" stroke-width="2"/>
+<rect x="196" y="140" width="20" height="20" rx="3" fill="#161616" stroke="#ffd400"/>
+<circle id="ledLevel" class="led g" cx="206" cy="150" r="4"/>
+<text class="lbl" x="258" y="143" text-anchor="middle">مبدل سطح</text>
+<line x1="190" y1="125" x2="196" y2="125" stroke="#ffd400" stroke-width="2"/>
+<rect x="196" y="115" width="20" height="20" rx="3" fill="#161616" stroke="#ffd400"/>
+<circle id="ledHigh" class="led y" cx="206" cy="125" r="4"/>
+<text class="lbl" x="262" y="118" text-anchor="middle">کلید سطح بالا</text>
+
+<!-- پمپ -->
+<circle cx="125" cy="345" r="22" fill="#111" stroke="#ffd400" stroke-width="3"/>
+<g id="pumpSpin" class="spin"><path d="M125 331V359M111 345H139" stroke="#ffd400" stroke-width="4" stroke-linecap="round"/></g>
+<text class="lbl" x="76" y="349" text-anchor="middle">پمپ</text>
+
+<!-- نوار نقاله -->
+<rect x="30" y="470" width="370" height="10" rx="5" fill="#1d1d1d" stroke="#ffd400"/>
+<circle cx="42" cy="475" r="5" fill="#000" stroke="#ffd400"/><circle cx="388" cy="475" r="5" fill="#000" stroke="#ffd400"/>
+<g id="boxes"></g>
+<circle cx="414" cy="470" r="18" fill="#111" stroke="#ffd400" stroke-width="3"/>
+<g id="convSpin" class="spin"><path d="M414 456V484M400 470H428M404 460L424 480M424 460L404 480" stroke="#ffd400" stroke-width="2.5" stroke-linecap="round"/></g>
+<text class="lbl" x="392" y="506">موتور نوار نقاله</text>
+<text class="lbl" x="30" y="524">نوار نقاله</text>
+
+<!-- حسگر نوری و القایی -->
+<rect x="292" y="385" width="16" height="14" rx="3" fill="#161616" stroke="#ffd400"/>
+<circle id="ledPhoto" class="led r" cx="300" cy="392" r="3"/>
+<line id="beamPhoto" x1="300" y1="399" x2="300" y2="436" stroke="#ff3b30" stroke-width="2" stroke-dasharray="3 4" opacity=".25"/>
+<text class="lbl" x="315" y="396">حسگر نوری</text>
+<rect x="122" y="484" width="16" height="20" rx="3" fill="#161616" stroke="#ffd400"/>
+<circle id="ledProx" class="led g" cx="130" cy="494" r="3"/>
+<path id="beamProx" d="M116 482Q130 462 144 482" fill="none" stroke="#ffd400" stroke-width="2" opacity=".2"/>
+<text class="lbl" x="112" y="498" text-anchor="end">حسگر القایی</text>
+
+<!-- تابلوی پی‌ال‌سی -->
+<rect x="420" y="80" width="280" height="360" rx="10" fill="#0e0e0e" stroke="#ffd400" stroke-width="2.5"/>
+<rect x="420" y="80" width="280" height="26" rx="10" fill="#ffd400"/>
+<text x="560" y="98" text-anchor="middle" font-size="12" font-weight="800" fill="#000">تابلو فرمان کنترل‌کننده برنامه‌پذیر (پی‌ال‌سی)</text>
+<rect x="430" y="115" width="260" height="145" rx="4" fill="#090909" stroke="#2a2a2a"/>
+<rect x="430" y="252" width="260" height="5" fill="#444"/>
+<!-- تغذیه -->
+<rect x="440" y="125" width="50" height="120" rx="3" fill="#151515" stroke="#3a3a3a"/>
+<text class="lbl" x="465" y="140" text-anchor="middle" font-size="9">تغذیه</text>
+<circle class="led g on" cx="465" cy="160" r="4.5"/>
+<rect x="450" y="180" width="30" height="40" rx="2" fill="#0a0a0a" stroke="#333"/>
+<text class="lbl" x="465" y="236" text-anchor="middle" font-size="8">۲۴ ولت</text>
+<!-- پردازنده -->
+<rect x="495" y="125" width="62" height="120" rx="3" fill="#151515" stroke="#ffd400"/>
+<text class="lbl" x="526" y="140" text-anchor="middle" font-size="9">پردازنده</text>
+<circle id="cpuRun" class="led g" cx="508" cy="158" r="4.5"/><text class="lbl" x="518" y="161" font-size="8">کار</text>
+<circle id="cpuStop" class="led y" cx="508" cy="176" r="4.5"/><text class="lbl" x="518" y="179" font-size="8">توقف</text>
+<circle id="cpuErr" class="led r" cx="508" cy="194" r="4.5"/><text class="lbl" x="518" y="197" font-size="8">خطا</text>
+<rect x="503" y="214" width="14" height="14" rx="2" fill="#050505" stroke="#555"/><rect x="522" y="214" width="14" height="14" rx="2" fill="#050505" stroke="#555"/>
+<!-- ورودی -->
+<rect x="562" y="125" width="58" height="120" rx="3" fill="#151515" stroke="#3a3a3a"/>
+<text class="lbl" x="591" y="140" text-anchor="middle" font-size="9">ورودی</text>
+<g id="diLeds"></g>
+<!-- خروجی -->
+<rect x="625" y="125" width="58" height="120" rx="3" fill="#151515" stroke="#3a3a3a"/>
+<text class="lbl" x="654" y="140" text-anchor="middle" font-size="9">خروجی</text>
+<g id="doLeds"></g>
+<!-- ترمینال -->
+<rect x="436" y="270" width="248" height="26" rx="3" fill="#161616" stroke="#2f2f2f"/>
+<g id="terms"></g>
+<!-- کنتاکتورها -->
+<g>
+  <rect x="440" y="308" width="70" height="62" rx="4" fill="#131313" stroke="#3a3a3a"/><text class="lbl" x="475" y="324" text-anchor="middle" font-size="9">کنتاکتور پمپ</text><circle id="rel1" class="led y" cx="475" cy="345" r="6"/>
+  <rect x="520" y="308" width="70" height="62" rx="4" fill="#131313" stroke="#3a3a3a"/><text class="lbl" x="555" y="324" text-anchor="middle" font-size="9">کنتاکتور نوار</text><circle id="rel2" class="led y" cx="555" cy="345" r="6"/>
+  <rect x="600" y="308" width="80" height="62" rx="4" fill="#131313" stroke="#3a3a3a"/><text class="lbl" x="640" y="324" text-anchor="middle" font-size="9">رله شیر برقی</text><circle id="rel3" class="led y" cx="640" cy="345" r="6"/>
+</g>
+<!-- کلیدهای حفاظتی -->
+<g id="mcbs"></g>
+<text class="lbl" x="560" y="433" text-anchor="middle" font-size="8">کلیدهای حفاظتی</text>
+<g id="termDots"></g>
+
+<!-- صفحه عملگر -->
+<rect x="725" y="80" width="260" height="250" rx="14" fill="#0b0b0b" stroke="#ffd400" stroke-width="3"/>
+<rect x="737" y="94" width="236" height="190" rx="6" fill="#04080a" stroke="#333"/>
+<rect x="737" y="94" width="236" height="20" rx="6" fill="#ffd400"/>
+<text x="962" y="108" text-anchor="end" font-size="11" font-weight="800" fill="#000">پایش خط تولید</text>
+<text id="hmiClock" x="748" y="108" font-size="10" fill="#000">۰۰:۰۰:۰۰</text>
+<rect x="750" y="122" width="40" height="62" fill="none" stroke="#ffd400"/>
+<rect id="hmiFill" x="751" y="150" width="38" height="33" fill="#ffd400" opacity=".85"/>
+<text id="hmiLevel" x="770" y="199" text-anchor="middle" font-size="13" font-weight="800" fill="#ffd400">۵۰٪</text>
+<text class="lbl" x="770" y="211" text-anchor="middle" font-size="8">سطح مخزن</text>
+<text class="lbl" x="960" y="135" text-anchor="end" font-size="10">شیر ورودی</text><text id="hmiValve" x="812" y="135" font-size="10" font-weight="700" fill="#2dff9a">باز</text>
+<text class="lbl" x="960" y="151" text-anchor="end" font-size="10">پمپ تخلیه</text><text id="hmiPump" x="812" y="151" font-size="10" font-weight="700" fill="#888">خاموش</text>
+<text class="lbl" x="960" y="167" text-anchor="end" font-size="10">نوار نقاله</text><text id="hmiConv" x="812" y="167" font-size="10" font-weight="700" fill="#2dff9a">روشن</text>
+<text class="lbl" x="960" y="183" text-anchor="end" font-size="10">شمارش محصول</text><text id="hmiCount" x="812" y="183" font-size="10" font-weight="700" fill="#ffd400">۰</text>
+<text class="lbl" x="960" y="203" text-anchor="end" font-size="8">روند سطح</text>
+<g stroke="#222"><line x1="805" y1="212" x2="960" y2="212"/><line x1="805" y1="236" x2="960" y2="236"/><line x1="805" y1="260" x2="960" y2="260"/></g>
+<polyline id="trend" points="" fill="none" stroke="#ffd400" stroke-width="2"/>
+<rect id="hmiAlarm" x="737" y="270" width="236" height="14" fill="#00c853"/>
+<text id="hmiAlarmTxt" x="855" y="281" text-anchor="middle" font-size="10" font-weight="800" fill="#000">وضعیت عادی</text>
+<!-- دکمه‌های صفحه عملگر -->
+<g id="btnStart" class="btnsvg" role="button" tabindex="0"><rect x="745" y="296" width="72" height="26" rx="6" fill="#1e7a3c" stroke="#2dff9a"/><text x="781" y="313" text-anchor="middle" font-size="12" font-weight="800" fill="#fff">شروع</text></g>
+<g id="btnStop" class="btnsvg" role="button" tabindex="0"><rect x="825" y="296" width="72" height="26" rx="6" fill="#222" stroke="#ffd400"/><text x="861" y="313" text-anchor="middle" font-size="12" font-weight="800" fill="#ffd400">توقف</text></g>
+<g><rect x="905" y="296" width="70" height="26" rx="6" fill="#161616" stroke="#444"/><text x="940" y="313" text-anchor="middle" font-size="11" fill="#888">تنظیمات</text></g>
+
+<!-- چراغ‌ها و قارچی -->
+<rect x="725" y="345" width="260" height="95" rx="10" fill="#0e0e0e" stroke="#444"/>
+<circle id="lampRun" class="led g" cx="762" cy="380" r="14"/><text class="lbl" x="762" y="414" text-anchor="middle" font-size="9">در حال کار</text>
+<circle id="lampWarn" class="led y" cx="822" cy="380" r="14"/><text class="lbl" x="822" y="414" text-anchor="middle" font-size="9">هشدار</text>
+<circle id="lampFault" class="led r" cx="882" cy="380" r="14"/><text class="lbl" x="882" y="414" text-anchor="middle" font-size="9">خطا</text>
+<g id="estop" class="btnsvg" role="button" tabindex="0">
+  <circle cx="943" cy="385" r="27" fill="#ffd400" stroke="#000" stroke-width="2"/>
+  <circle cx="943" cy="385" r="20" fill="#d32f2f" stroke="#7f0000" stroke-width="2"/>
+  <text x="943" y="428" text-anchor="middle" font-size="8" fill="#ffd400">توقف اضطراری</text>
+</g>
+</svg>
+  </div>
+  <p class="hint">این مدل زنده است: روی «شروع»، «توقف» و دکمه قارچی «توقف اضطراری» بزنید. در گوشی، تصویر را به چپ و راست بکشید.</p>
+  </div>
+
+  <div class="what">
+    <h2 class="title">Voltlogic <span>چه کاری انجام می‌دهد؟</span></h2><div class="hbar"></div>
+    <p class="lead">Voltlogic یک مجموعه مهندسی برق و اتوماسیون صنعتی است. کارخانه‌ها و پلنت‌ها برای برق‌رسانی، کنترل خودکار ماشین‌آلات، ایمنی و نظارت به ما مراجعه می‌کنند؛ از نقشه و طراحی تا ساخت تابلو، اجرا، برنامه‌نویسی، راه‌اندازی و نگهداری. در حال حاضر بیش از ۳۰ پروژه فعال صنعتی داریم.</p>
+    <div class="grid">
+      <div class="card in"><div class="ico">⚡</div><h3>تاسیسات الکتریکی</h3><p>طراحی و اجرای برق‌رسانی کارخانه، سالن تولید و ساختمان‌های صنعتی؛ از تابلو و کابل تا شینه و روشنایی.</p></div>
+      <div class="card in"><div class="ico">🤖</div><h3>پی‌ال‌سی و اتوماسیون</h3><p>برنامه‌نویسی کنترل‌کننده برنامه‌پذیر، درایو و صفحه عملگر برای خودکار کردن ماشین‌آلات و خطوط تولید.</p></div>
+      <div class="card in"><div class="ico">🗄</div><h3>ساخت تابلو</h3><p>تابلوهای توزیع، فرمان و کنترل موتور با مونتاژ تمیز، برچسب‌گذاری دقیق و آزمون کامل.</p></div>
+      <div class="card in"><div class="ico">📹</div><h3>سیستم امنیتی و نظارتی</h3><p>طراحی و نصب دوربین مداربسته، کنترل تردد و دزدگیر برای کارخانه و پلنت.</p></div>
+      <div class="card in"><div class="ico">🔋</div><h3>برق اضطراری و کیفیت توان</h3><p>ژنراتور، سیستم زمین و صاعقه‌گیر، اصلاح ضریب توان و کاهش هزینه برق.</p></div>
+      <div class="card in"><div class="ico">🔍</div><h3>نگهداری و عیب‌یابی</h3><p>بازدید دوره‌ای، تعمیرات و پشتیبانی تا خطاها زودتر پیدا و رفع شوند.</p></div>
+    </div>
+    <div class="areas"><span>کارخانه‌ها</span><span>پلنت‌های صنعتی</span><span>سالن‌های تولید</span><span>پمپ‌خانه و تأسیسات</span></div>
+    <p style="margin-top:18px"><a class="btn" href="#services">مشاهده همه خدمات</a> <a class="btn" href="#projects">دیدن پروژه‌ها</a></p>
+  </div>
+
+  <div class="stats">
+    <div class="stat"><strong data-to="10" data-suf="+">۰</strong><small>سال سابقه حرفه‌ای</small></div>
+    <div class="stat"><strong data-to="30" data-suf="+">۰</strong><small>پروژه فعال صنعتی</small></div>
+    <div class="stat"><strong>🏢</strong><small>دارای دفتر مهندسی برق</small></div>
+    <div class="stat"><strong data-to="3">۰</strong><small>شهر: تهران، کرج و قزوین</small></div>
+  </div>
+  <div class="tiles">
+    <a class="tile" href="#services"><i>🛠</i><span>خدمات<small>از طراحی تا نگهداری</small></span></a>
+    <a class="tile" href="#systems"><i>⚙</i><span>سامانه‌ها<small>برق، کنترل و حفاظت</small></span></a>
+    <a class="tile" href="#projects"><i>🏭</i><span>پروژه‌ها<small>نمونه‌کارهای اجراشده</small></span></a>
+  </div>
+</div></header>
+
+<main>
+<section class="page" id="p-services"><div class="wrap">
+  <h2 class="title">خدمات <span>تخصصی</span></h2><div class="hbar"></div>
+  <p class="lead">از محاسبه و طراحی تا اجرا، راه‌اندازی و نگهداری؛ همه مراحل پروژه برق صنعتی زیر نظر مهندس انجام می‌شود.</p>
+  <div class="grid" id="svcGrid"></div>
+</div></section>
+
+<section class="page" id="p-systems"><div class="wrap">
+  <h2 class="title">سامانه‌های <span>برق و کنترل</span></h2><div class="hbar"></div>
+  <p class="lead">یکی از سامانه‌ها را انتخاب کنید تا کاربرد، مزیت و مراحل اجرای آن را ببینید.</p>
+  <div class="sys"><div class="tabs" id="tabs"></div><div class="view" id="view"></div></div>
+</div></section>
+
+<section class="page" id="p-projects"><div class="wrap">
+  <h2 class="title"><span>پروژه‌های</span> اجراشده</h2><div class="hbar"></div>
+  <p class="lead">بیش از ۳۰ پروژه فعال صنعتی داریم. نمونه‌ای از تابلوها، تجهیزات و کارهای اجراشده را اینجا ببینید؛ با کلیک روی هر عکس، بزرگ‌تر دیده می‌شود.</p>
+  <div class="gal" id="gal"></div>
+</div></section>
+
+<section class="page" id="p-about"><div class="wrap">
+  <h2 class="title">درباره <span>Voltlogic</span></h2><div class="hbar"></div>
+  <div class="about">
+    <div>
+      <p>Voltlogic با مدیریت فنی یک مهندس برق (گرایش قدرت) با <b>بیش از ۱۰ سال سابقه حرفه‌ای</b>، طراحی، اجرا، راه‌اندازی و نگهداری سامانه‌های برق صنعتی را در تهران، کرج و قزوین انجام می‌دهد.</p>
+      <p>در حال حاضر <b>بیش از ۳۰ پروژه فعال صنعتی</b> داریم.</p>
+      <p>تجربه ما از تابلوهای قدرت و کنترل، ژنراتورها و پمپ‌خانه‌ها تا خطوط تولید خودکار و سیستم‌های امنیتی گسترده است؛ و همین سابقه را با دقت و ایمنی در پروژه‌های شما به کار می‌گیریم.</p>
+    </div>
+    <div class="office">
+      <h3>🏢 دارای دفتر مهندسی برق</h3>
+      <ul>
+        <li>طراحی، محاسبات و نقشه‌کشی</li>
+        <li>ساخت و مونتاژ تابلوهای برق و فرمان</li>
+        <li>اجرا، راه‌اندازی و آزمون</li>
+        <li>نظارت مهندسی و گزارش‌دهی</li>
+        <li>برنامه‌نویسی پی‌ال‌سی و اتوماسیون</li>
+        <li>سیستم‌های امنیتی و نظارتی</li>
+        <li>نگهداری و خدمات دوره‌ای</li>
+        <li>مستندسازی و نقشه‌های چون‌ساخت</li>
+      </ul>
+    </div>
+  </div>
+  <h2 class="title" style="margin-top:60px">چرا <span>Voltlogic</span>؟</h2><div class="hbar"></div>
+  <div class="grid">
+    <div class="card in"><div class="ico">🛠</div><h3>نظارت مهندسی</h3><p>حضور مهندس در تمام مراحل، از طراحی تا تحویل.</p></div>
+    <div class="card in"><div class="ico">🛡</div><h3>ایمنی و استاندارد</h3><p>رعایت اصول ایمنی و استانداردهای ملی برق.</p></div>
+    <div class="card in"><div class="ico">📋</div><h3>گزارش‌دهی شفاف</h3><p>گزارش مرحله‌ای و تحویل در زمان توافق‌شده.</p></div>
+    <div class="card in"><div class="ico">🤝</div><h3>قرارداد منعطف</h3><p>قرارداد پروژه‌ای یا نگهداری ماهانه.</p></div>
+  </div>
+</div></section>
+
+<section class="page" id="p-contact"><div class="wrap">
+  <h2 class="title">درخواست <span>برآورد رایگان</span></h2><div class="hbar"></div>
+  <p class="lead">بازدید و برآورد اولیه رایگان است. توضیح کوتاهی از پروژه بفرستید یا مستقیم در واتس‌اپ پیام بدهید.</p>
+  <div class="contact">
+    <form id="form">
+      <input name="name" placeholder="نام و نام خانوادگی" required>
+      <input name="phone" placeholder="شماره تماس" inputmode="tel" required>
+      <select name="type" required>
+        <option value="">نوع پروژه</option>
+        <option>طراحی و محاسبات</option><option>تابلو برق و فرمان</option><option>کابل‌کشی و سینی‌کشی</option>
+        <option>ژنراتور و برق اضطراری</option><option>سیستم زمین و صاعقه‌گیر</option><option>اصلاح ضریب توان</option>
+        <option>پی‌ال‌سی و اتوماسیون</option><option>سیستم امنیتی و نظارتی</option><option>نگهداری و تعمیرات</option><option>سایر</option>
+      </select>
+      <textarea name="msg" rows="4" placeholder="توضیحات پروژه"></textarea>
+      <button class="btn pri" type="submit">ارسال درخواست</button>
+      <a class="btn wa" href="https://wa.me/message/5FI6PXXZJB2BB1" target="_blank" rel="noopener" style="text-align:center">گفتگو در واتس‌اپ</a>
+    </form>
+    <div class="info">
+      <div class="card in"><div class="ico">📞</div><h3>تلفن همراه</h3><p><a href="tel:09100051006">۰۹۱۰۰۰۵۱۰۰۶</a></p></div>
+      <div class="card in"><div class="ico">💬</div><h3>واتس‌اپ</h3><p><a href="https://wa.me/message/5FI6PXXZJB2BB1" target="_blank" rel="noopener">پیام در واتس‌اپ</a></p></div>
+      <div class="card in"><div class="ico">✉</div><h3>ایمیل</h3><p><a href="mailto:hasangtarash@gmail.com">hasangtarash@gmail.com</a></p></div>
+      <div class="card in"><div class="ico">📍</div><h3>محدوده خدمات</h3><div class="areas"><span>تهران</span><span>کرج</span><span>قزوین</span></div></div>
+    </div>
+  </div>
+</div></section>
+</main>
+
+<footer><div class="wrap">
+  <div class="flogo"><svg class="logo"><use href="#logo"/></svg><span class="wm">Volt<b>logic</b></span></div><br>
+  پیمانکار برق صنعتی • تهران، کرج و قزوین<br>
+  <a href="tel:09100051006">۰۹۱۰۰۰۵۱۰۰۶</a> • <a href="https://wa.me/message/5FI6PXXZJB2BB1" target="_blank" rel="noopener">واتس‌اپ</a> • <a href="mailto:hasangtarash@gmail.com">hasangtarash@gmail.com</a>
+</div></footer>
+<div class="lb" id="lb"><button class="lbn prev" id="lbPrev" aria-label="قبلی">›</button><div id="lbBox"></div><button class="lbn next" id="lbNext" aria-label="بعدی">‹</button><button class="lbx" id="lbX" aria-label="بستن">✕</button></div>
+
+<script>
+const fa = n => String(n).replace(/\d/g, d => "۰۱۲۳۴۵۶۷۸۹"[d]);
+const $ = id => document.getElementById(id);
+
+/* ---------- خدمات ---------- */
+const services = [
+ ["📐","طراحی و محاسبه بار","محاسبه بار، انتخاب کابل و تجهیزات حفاظتی بر اساس نیاز واقعی کارخانه."],
+ ["⚡","طراحی و اجرای تاسیسات الکتریکی","برق‌رسانی کارخانه، سالن تولید و ساختمان‌های صنعتی از ورودی تا مصرف‌کننده."],
+ ["🗄","ساخت و نصب تابلو","تابلوهای فشار ضعیف، توزیع، فرمان و کنترل با مونتاژ تمیز و آزمون کامل."],
+ ["🤖","برنامه‌نویسی پی‌ال‌سی و اتوماسیون","برنامه‌نویسی کنترل‌کننده برنامه‌پذیر، درایو و صفحه عملگر برای خودکار کردن خطوط تولید."],
+ ["🔌","کابل‌کشی و راه‌اندازی","کابل‌کشی قدرت و فرمان، سینی‌کشی و راه‌اندازی ماشین‌آلات."],
+ ["🔋","ژنراتور و برق اضطراری","نصب و راه‌اندازی ژنراتور و سامانه انتقال خودکار برق."],
+ ["📹","سیستم‌های امنیتی و نظارتی","طراحی و نصب دوربین مداربسته، کنترل تردد و دزدگیر برای کارخانه و پلنت."],
+ ["🌩","زمین و صاعقه‌گیر","سیستم زمین، حفاظت در برابر صاعقه و اندازه‌گیری مقاومت زمین."],
+ ["📉","اصلاح ضریب توان","بهبود ضریب توان و کاهش هزینه قبض برق."],
+ ["🔍","عیب‌یابی و نگهداری","عیب‌یابی، تعمیرات و نگهداری دوره‌ای تجهیزات برق."],
+ ["📑","نقشه و مستندات","تهیه نقشه‌های چون‌ساخت و مستندات فنی کامل پروژه."]
+];
+const sg = $("svcGrid");
+services.forEach(s=>{const d=document.createElement("div");d.className="card";d.innerHTML=`<div class="ico">${s[0]}</div><h3>${s[1]}</h3><p>${s[2]}</p>`;sg.appendChild(d)});
+
+/* ---------- سامانه‌ها ---------- */
+const systems = [
+ {n:"توزیع برق فشار ضعیف",s:"انتقال ایمن و پایدار برق از ورودی تا مصرف‌کننده‌های سالن تولید.",u:"تغذیه خطوط تولید، روشنایی و تأسیسات.",b:"افت ولتاژ کم، تفکیک بارها و خاموشی محدود هنگام خطا.",st:["محاسبه بار و انتخاب مسیر","نصب تابلو و سینی کابل","آزمون عایقی و تحویل"]},
+ {n:"تابلوهای فرمان و کنترل موتور",s:"تابلوهای راه‌اندازی و فرمان برای موتورها و ماشین‌آلات صنعتی، شامل تابلوهای مجهز به کنترل‌کننده برنامه‌پذیر (پی‌ال‌سی).",u:"راه‌اندازی موتور، پمپ، فن و خطوط تولید.",b:"حفاظت موتور، کاهش خرابی و کنترل ساده‌تر فرایند.",st:["طراحی مدار قدرت و فرمان","ساخت و مونتاژ تابلو","راه‌اندازی و آموزش بهره‌بردار"]},
+ {n:"برق اضطراری و ژنراتور",s:"تأمین برق بخش‌های حیاتی هنگام قطع شبکه.",u:"ادامه کار تجهیزات حساس و جلوگیری از توقف تولید.",b:"کاهش زیان توقف و حفظ ایمنی تجهیزات.",st:["تعیین ظرفیت و بارهای حیاتی","نصب و اتصال با کلید انتقال","آزمون زیر بار و تحویل"]},
+ {n:"زمین و حفاظت در برابر صاعقه",s:"مسیر امن تخلیه جریان خطا و صاعقه برای افراد و تجهیزات.",u:"حفاظت ساختمان، تابلوها و ماشین‌آلات.",b:"ایمنی کارکنان و جلوگیری از آسیب تجهیزات گران.",st:["اندازه‌گیری مقاومت زمین","اجرای چاه و شبکه زمین","آزمون نهایی و صدور گزارش"]},
+ {n:"اصلاح ضریب توان و بانک خازنی",s:"بهبود ضریب توان برای کاهش هزینه و تلفات شبکه.",u:"کارخانه‌هایی با بار موتوری و جریمه ضریب توان.",b:"حذف جریمه قبض و آزادسازی ظرفیت شبکه.",st:["اندازه‌گیری و تحلیل بار","طراحی و نصب بانک خازنی","پایش نتیجه پس از راه‌اندازی"]},
+ {n:"سیستم‌های پایش و حفاظت",s:"پایش لحظه‌ای مصرف و حفاظت در برابر خطا.",u:"مراقبت از تابلوهای اصلی و بارهای مهم.",b:"تشخیص زودهنگام خطا و تصمیم‌گیری بر پایه داده.",st:["انتخاب نقاط اندازه‌گیری","نصب تجهیزات پایش و رله","تنظیم هشدار و آموزش"]},
+ {n:"برنامه‌نویسی پی‌ال‌سی و اتوماسیون",s:"خودکارسازی ماشین‌آلات و خطوط تولید با کنترل‌کننده برنامه‌پذیر، درایو و صفحه عملگر.",u:"خطوط تولید و بسته‌بندی، پمپ‌خانه‌ها، تهویه و تأسیسات.",b:"کاهش خطای انسانی، افزایش بهره‌وری و ثبت هشدار و گزارش.",st:["تعیین فرایند، ورودی‌ها و خروجی‌ها","برنامه‌نویسی و طراحی صفحه عملگر","آزمون روی میز و راه‌اندازی در محل"]},
+ {n:"سیستم‌های امنیتی و نظارتی",s:"پایش و حفاظت از محوطه، سالن‌ها و تجهیزات حساس.",u:"دوربین مداربسته، کنترل تردد و دزدگیر.",b:"امنیت دارایی‌ها، ثبت رویدادها و نظارت از راه دور.",st:["بازدید و طراحی نقاط پوشش","نصب و شبکه‌کشی","راه‌اندازی، آموزش و تحویل"]}
+];
+const tabs=$("tabs"),view=$("view");
+function show(i){
+  [...tabs.children].forEach((t,k)=>t.classList.toggle("on",k===i));
+  const s=systems[i];
+  view.style.animation="none";void view.offsetWidth;view.style.animation="";
+  view.innerHTML=`<h3>${s.n}</h3><p class="sum">${s.s}</p><div class="cols">
+   <div class="col"><h4>کاربرد</h4><p>${s.u}</p></div>
+   <div class="col"><h4>مزیت برای کارخانه</h4><p>${s.b}</p></div>
+   <div class="col"><h4>مراحل اجرا</h4><ol>${s.st.map(x=>`<li>${x}</li>`).join("")}</ol></div></div>`;
+}
+systems.forEach((s,i)=>{const b=document.createElement("button");b.className="tab";b.textContent=fa(i+1)+". "+s.n;b.onclick=()=>show(i);tabs.appendChild(b)});
+show(0);
+
+/* ---------- پروژه‌ها ---------- */
+/* عکس‌ها در پوشه images هستند. برای افزودن پروژه جدید، یک سطر مثل سطرهای زیر اضافه کنید. */
+const PROJECTS=[
+ {t:"تابلوی کنترل و اتوماسیون صنعتی با درایو، پی‌ال‌سی و ماژول‌های ورودی و خروجی",img:"images/p01.jpg"},
+ {t:"تابلوی کنترل با سیم‌کشی و برچسب‌گذاری دقیق",img:"images/p02.jpg"},
+ {t:"سالن تابلوهای قدرت و توزیع",img:"images/p03.jpg"},
+ {t:"نصب و راه‌اندازی ژنراتور برق اضطراری",img:"images/p04.jpg"},
+ {t:"تابلوهای توزیع با شینه و کلیدهای حفاظتی",img:"images/p05.jpg"},
+ {t:"تابلوی کنترل با ترمینال‌بندی و رله‌های مرتب",img:"images/p06.jpg"},
+ {t:"تابلوهای کلید هوایی با نمایشگر و چراغ‌های وضعیت",img:"images/p07.jpg"},
+ {t:"تابلوی پی‌ال‌سی با ماژول‌های ورودی و خروجی و رله‌ها",img:"images/p08.jpg"},
+ {t:"ردیف تابلوهای کنترل مرکزی روی پایه فلزی",img:"images/p09.jpg"},
+ {t:"اندازه‌گیری کیفیت توان و راه‌اندازی تابلو",img:"images/p10.jpg"},
+ {t:"تابلوی قدرت با کنتاکتور و کلید اتوماتیک",img:"images/p11.jpg"},
+ {t:"پمپ‌خانه؛ برق‌رسانی و فرمان الکتروموتورها",img:"images/p12.jpg"},
+ {t:"پمپ‌های عمودی؛ سینی‌کشی و تغذیه الکتریکی",img:"images/p13.jpg"},
+ {t:"ردیف پمپ‌ها و شیرآلات؛ برق‌رسانی و فرمان",img:"images/p14.jpg"},
+ {t:"تابلوی درایو دور متغیر همراه با پی‌ال‌سی",img:"images/p15.jpg"},
+ {t:"تابلوی توزیع اصلی با فیوز کاردی، شینه و محافظ اضافه‌ولتاژ",img:"images/p16.jpg"},
+ {t:"تابلوی فرمان با ترانسفورماتور، منبع تغذیه و پی‌ال‌سی",img:"images/p17.jpg"}
+];
+const gal=$("gal");
+function pic(p){const im=document.createElement("img");im.src=p.img;im.alt=p.t;im.loading="lazy";return im}
+PROJECTS.forEach((p,i)=>{
+  const d=document.createElement("div");d.className="shot has";
+  d.appendChild(pic(p));
+  const c=document.createElement("span");c.className="cap";c.textContent=p.t;d.appendChild(c);
+  d.onclick=()=>openLb(i);
+  gal.appendChild(d);
+});
+let cur=0;
+function openLb(i){
+  cur=(i+PROJECTS.length)%PROJECTS.length;
+  const p=PROJECTS[cur],b=$("lbBox");
+  b.className="img";b.innerHTML="";
+  const im=document.createElement("img");im.src=p.img;im.alt=p.t;b.appendChild(im);
+  const c=document.createElement("span");c.className="lcap";c.textContent=p.t;b.appendChild(c);
+  $("lb").classList.add("on");
+}
+const closeLb=()=>$("lb").classList.remove("on");
+$("lbPrev").onclick=e=>{e.stopPropagation();openLb(cur-1)};
+$("lbNext").onclick=e=>{e.stopPropagation();openLb(cur+1)};
+$("lbX").onclick=closeLb;
+$("lb").onclick=e=>{if(e.target===$("lb"))closeLb()};
+addEventListener("keydown",e=>{
+  if(!$("lb").classList.contains("on"))return;
+  if(e.key==="Escape")closeLb();
+  if(e.key==="ArrowLeft")openLb(cur+1);
+  if(e.key==="ArrowRight")openLb(cur-1);
+});
+
+/* ---------- منو و صفحه‌ها ---------- */
+const menu=$("menu");
+$("burger").onclick=()=>menu.classList.toggle("open");
+menu.addEventListener("click",()=>menu.classList.remove("open"));
+const links=[...menu.querySelectorAll("a")];
+const PAGES=["services","systems","projects","about","contact"];
+function route(){
+  const h=(location.hash||"#home").slice(1);
+  const name=PAGES.includes(h)?h:"home";
+  $("home").classList.toggle("hide",name!=="home");
+  PAGES.forEach(p=>$("p-"+p).classList.toggle("active",p===name));
+  links.forEach(a=>a.classList.toggle("act",a.getAttribute("href")==="#"+name));
+  scrollTo({top:0,behavior:"instant"});
+}
+addEventListener("hashchange",route);
+route();
+
+/* ---------- ورود کارت‌ها و شمارنده ---------- */
+const io=new IntersectionObserver(es=>es.forEach(e=>{
+  if(!e.isIntersecting)return;
+  e.target.classList.add("in");
+  const st=e.target.querySelector&&e.target.querySelector("strong[data-to]");
+  if(st){const to=+st.dataset.to,suf=st.dataset.suf||"";let v=0;const t=setInterval(()=>{v++;st.textContent=fa(v)+suf;if(v>=to)clearInterval(t)},to>12?45:110)}
+  io.unobserve(e.target);
+}),{threshold:.2});
+document.querySelectorAll(".card,.stat").forEach(el=>io.observe(el));
+
+/* ---------- فرم ---------- */
+$("form").addEventListener("submit",e=>{
+  e.preventDefault();
+  const f=new FormData(e.target);
+  const body=`نام: ${f.get("name")}\nتماس: ${f.get("phone")}\nنوع پروژه: ${f.get("type")}\nتوضیحات: ${f.get("msg")}`;
+  location.href=`mailto:hasangtarash@gmail.com?subject=${encodeURIComponent("درخواست برآورد پروژه")}&body=${encodeURIComponent(body)}`;
+});
+
+/* ---------- ساخت اجزای تابلو ---------- */
+const NS="http://www.w3.org/2000/svg";
+function mk(tag,attrs,parent){const el=document.createElementNS(NS,tag);for(const k in attrs)el.setAttribute(k,attrs[k]);parent.appendChild(el);return el}
+const di=[],dO=[];
+for(let i=0;i<8;i++){
+  const c=i%2,r=Math.floor(i/2);
+  di.push(mk("circle",{class:"led "+(i===1?"y":"g"),cx:576+c*28,cy:160+r*19,r:4.5},$("diLeds")));
+  dO.push(mk("circle",{class:"led "+(i>=4?"y":"g"),cx:639+c*28,cy:160+r*19,r:4.5},$("doLeds")));
+}
+for(let i=0;i<12;i++)mk("rect",{x:441+i*20.2,y:275,width:15,height:12,rx:2,fill:i%3===2?"#ffd400":"#555"},$("terms"));
+for(let i=0;i<4;i++){
+  mk("rect",{x:445+i*60,y:384,width:50,height:40,rx:3,fill:"#141414",stroke:"#3a3a3a"},$("mcbs"));
+  mk("rect",{x:462+i*60,y:392,width:16,height:24,rx:2,fill:"#ffd400"},$("mcbs"));
+}
+[165,180,195,210,300,315,330].forEach(y=>mk("circle",{cx:420,cy:y,r:3.5,fill:"#ffd400",stroke:"#000"},$("termDots")));
+
+/* ---------- شبیه‌ساز فرایند ---------- */
+const S={run:true,estop:false,phase:"fill",L:38,count:0,pPrev:false,fc:0};
+const boxG=$("boxes"),boxes=[];
+for(let i=0;i<4;i++){
+  const g=mk("g",{},boxG);
+  mk("rect",{x:-13,y:-34,width:26,height:34,rx:3,fill:"#ffd400",stroke:"#000"},g);
+  mk("rect",{x:-13,y:-22,width:26,height:8,fill:"#000"},g);
+  boxes.push({g,x:40+i*100});
+}
+const trend=Array(36).fill(S.L);
+const on=(el,v)=>el.classList.toggle("on",!!v);
+const act=(el,v)=>el.classList.toggle("act",!!v);
+function frame(){
+  S.fc++;
+  const run=S.run&&!S.estop;
+  let valve=false,pump=false,conv=false;
+  if(run){
+    conv=true;
+    if(S.phase==="fill"){valve=true;S.L+=.2;if(S.L>=92)S.phase="drain"}
+    else{pump=true;S.L-=.24;if(S.L<=18)S.phase="fill"}
+  }
+  let prox=false,photo=false;
+  boxes.forEach(b=>{
+    if(conv){b.x+=1.15;if(b.x>385)b.x=40}
+    b.g.setAttribute("transform",`translate(${b.x},470)`);
+    if(Math.abs(b.x-130)<10)prox=true;
+    if(Math.abs(b.x-300)<10)photo=true;
+  });
+  if(photo&&!S.pPrev)S.count++;
+  S.pPrev=photo;
+  const high=S.L>=88;
+
+  /* مخزن */
+  const h=182*S.L/100;
+  $("liq").setAttribute("y",296-h);$("liq").setAttribute("height",h);
+  /* عملگرها */
+  $("valveBody").setAttribute("fill",valve?"#ffd400":"#333");
+  on($("pumpSpin"),pump);on($("convSpin"),conv);
+  act($("flowIn"),valve);act($("flowOut"),pump);
+  /* حسگرها */
+  on($("ledLevel"),S.L>15);on($("ledHigh"),high);on($("ledPhoto"),photo);on($("ledProx"),prox);
+  $("beamPhoto").setAttribute("opacity",photo?1:.25);$("beamProx").setAttribute("opacity",prox?1:.2);
+  /* سیم‌ها */
+  act($("w1"),run||S.L>15);act($("w2"),high);act($("w3"),photo);act($("w4"),prox);
+  act($("w5"),valve);act($("w6"),pump);act($("w7"),conv);
+  /* ماژول‌ها */
+  const blink=Math.floor(S.fc/20)%2===0;
+  on($("cpuRun"),!S.estop);on($("cpuStop"),!S.run&&!S.estop);on($("cpuErr"),S.estop&&blink);
+  const dIn=[S.L>15,high,prox,photo,S.run,!S.estop,S.phase==="drain"&&run,run&&blink];
+  const dOut=[valve,pump,conv,run,high&&blink,S.estop,false,false];
+  dIn.forEach((v,i)=>on(di[i],v));dOut.forEach((v,i)=>on(dO[i],v));
+  on($("rel1"),pump);on($("rel2"),conv);on($("rel3"),valve);
+  /* چراغ‌ها */
+  on($("lampRun"),run);on($("lampWarn"),high&&blink);on($("lampFault"),S.estop);
+  /* صفحه عملگر */
+  const fh=62*S.L/100;
+  $("hmiFill").setAttribute("y",184-fh);$("hmiFill").setAttribute("height",fh);
+  $("hmiLevel").textContent=fa(Math.round(S.L))+"٪";
+  const set=(id,t,c)=>{const e=$(id);e.textContent=t;e.setAttribute("fill",c)};
+  set("hmiValve",valve?"باز":"بسته",valve?"#2dff9a":"#888");
+  set("hmiPump",pump?"روشن":"خاموش",pump?"#2dff9a":"#888");
+  set("hmiConv",conv?"روشن":"خاموش",conv?"#2dff9a":"#888");
+  $("hmiCount").textContent=fa(S.count);
+  if(S.fc%12===0){
+    trend.push(S.L);trend.shift();
+    $("trend").setAttribute("points",trend.map((v,i)=>`${805+i*(155/35)},${260-(v/100)*48}`).join(" "));
+  }
+  const al=$("hmiAlarm"),at=$("hmiAlarmTxt");
+  if(S.estop){al.setAttribute("fill","#ff3b30");at.textContent="توقف اضطراری فعال است"}
+  else if(high){al.setAttribute("fill","#ffd400");at.textContent="هشدار: سطح مخزن بالا"}
+  else if(!S.run){al.setAttribute("fill","#777");at.textContent="خط متوقف است"}
+  else{al.setAttribute("fill","#00c853");at.textContent="وضعیت عادی"}
+}
+let live=true;
+new IntersectionObserver(es=>{live=es[0].isIntersecting}).observe($("home"));
+const reduce=matchMedia("(prefers-reduced-motion:reduce)").matches;
+(function loop(){if(live)frame();if(!reduce)requestAnimationFrame(loop)})();
+if(reduce)frame();
+setInterval(()=>{$("hmiClock").textContent=new Date().toLocaleTimeString("fa-IR",{hour12:false})},1000);
+
+const press=(id,fn)=>{const el=$(id);el.addEventListener("click",fn);el.addEventListener("keydown",e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();fn()}})};
+press("btnStart",()=>{if(!S.estop)S.run=true});
+press("btnStop",()=>{S.run=false});
+press("estop",()=>{S.estop=!S.estop;if(!S.estop)S.run=false});
+</script>
+</body>
+</html>
